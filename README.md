@@ -85,3 +85,8 @@ The `NEXT_PUBLIC_` prefix is required because the key is used inside client comp
 ## License
 
 This project is for personal/educational use.
+
+
+## Live Demo
+
+This project is live at: [https://cryptocurrency-tracker-beta.vercel.app](https://cryptocurrency-tracker-beta.vercel.app)
