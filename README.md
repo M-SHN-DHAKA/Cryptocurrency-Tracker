@@ -18,48 +18,48 @@ Here we have got the live data from the CoinGecko API and renders it through a c
 
 Requires Node.js 18 or newer and a free [CoinGecko](https://www.coingecko.com/en/api) Demo API key.
 
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 Create a `.env.local` file in the project root and add your API key:
 
-\`\`\`bash
+```bash
 NEXT_PUBLIC_COINGECKO_API_KEY=your_api_key_here
-\`\`\`
+```
 
 Then run the dev server:
 
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 The app runs at `http://localhost:3000`.
 
 Other scripts:
 
-\`\`\`bash
+```bash
 npm run build
 npm run start
 npm run lint
-\`\`\`
+```
 
 ## Project structure
 
-\`\`\`
+```
 src/
   app/
-    layout.js               Root layout — imports Bootstrap and global CSS
-    page.js                 Home page — renders the CryptoList component
+    layout.js               Root layout - imports Bootstrap and global CSS
+    page.js                 Home page - renders the CryptoList component
     globals.css              Custom theme and layout tweaks
     components/
       Navbar.js               Top navigation bar
       CryptoList.js            Fetches and displays the top 100 coins, search/filter logic
     crypto/
       [id]/
-        page.js                Dynamic route — details page for a single coin
+        page.js                Dynamic route - details page for a single coin
 .env.local                     API key (not committed to git)
-\`\`\`
+```
 
 ## Features
 
