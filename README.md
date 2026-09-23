@@ -6,55 +6,60 @@ Here we have got the live data from the CoinGecko API and renders it through a c
 
 ## Stack
 
-| Concern      | Choice                                      |
-| ------------ | -------------------------------------------- |
-| Framework    | Next.js 15, App Router                       |
-| Language     | JavaScript (no TypeScript)                   |
-| Styling      | Bootstrap 5 + custom CSS                     |
-| HTTP client  | Axios                                        |
+| Concern      | Choice                                          |
+| ------------ | ------------------------------------------------ |
+| Framework    | Next.js 15, App Router                          |
+| Language     | JavaScript (no TypeScript)                      |
+| Styling      | Bootstrap 5 + custom CSS                        |
+| HTTP client  | Axios                                           |
 | Crypto data  | CoinGecko API (`/coins/markets`, `/coins/{id}`) |
 
 ## Getting started
 
 Requires Node.js 18 or newer and a free [CoinGecko](https://www.coingecko.com/en/api) Demo API key.
 
+\`\`\`bash
 npm install
-
+\`\`\`
 
 Create a `.env.local` file in the project root and add your API key:
 
+\`\`\`bash
 NEXT_PUBLIC_COINGECKO_API_KEY=your_api_key_here
-
+\`\`\`
 
 Then run the dev server:
 
+\`\`\`bash
 npm run dev
-
+\`\`\`
 
 The app runs at `http://localhost:3000`.
 
 Other scripts:
 
+\`\`\`bash
 npm run build
 npm run start
 npm run lint
-
+\`\`\`
 
 ## Project structure
 
+\`\`\`
 src/
-app/
-layout.js Root layout — imports Bootstrap and global CSS
-page.js Home page — renders the CryptoList component
-globals.css Custom theme and layout tweaks
-components/
-Navbar.js Top navigation bar
-CryptoList.js Fetches and displays the top 100 coins, search/filter logic
-crypto/
-[id]/
-page.js Dynamic route — details page for a single coin
-.env.local API key (not committed to git)
-
+  app/
+    layout.js               Root layout — imports Bootstrap and global CSS
+    page.js                 Home page — renders the CryptoList component
+    globals.css              Custom theme and layout tweaks
+    components/
+      Navbar.js               Top navigation bar
+      CryptoList.js            Fetches and displays the top 100 coins, search/filter logic
+    crypto/
+      [id]/
+        page.js                Dynamic route — details page for a single coin
+.env.local                     API key (not committed to git)
+\`\`\`
 
 ## Features
 
@@ -66,9 +71,9 @@ page.js Dynamic route — details page for a single coin
 
 ## Environment variables
 
-| Variable                          | Description                                              |
-| ---------------------------------- | ---------------------------------------------------------- |
-| `NEXT_PUBLIC_COINGECKO_API_KEY`    | Your personal CoinGecko Demo API key. Required for all requests. |
+| Variable                        | Description                                                      |
+| -------------------------------- | ------------------------------------------------------------------ |
+| `NEXT_PUBLIC_COINGECKO_API_KEY` | Your personal CoinGecko Demo API key. Required for all requests. |
 
 The `NEXT_PUBLIC_` prefix is required because the key is used inside client components (`"use client"`).
 
